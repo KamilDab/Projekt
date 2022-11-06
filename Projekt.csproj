@@ -1,0 +1,91 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Model\ModelFaktury.edmx" />
+    <None Remove="Views\Content\Icons\DodajFakture.png" />
+    <None Remove="Views\Content\Icons\Dom.png" />
+    <None Remove="Views\Content\Icons\DoPrzodu.png" />
+    <None Remove="Views\Content\Icons\Drukuj.png" />
+    <None Remove="Views\Content\Icons\Faktury.png" />
+    <None Remove="Views\Content\Icons\Kontrahenci.png" />
+    <None Remove="Views\Content\Icons\NowyKontrahent.png" />
+    <None Remove="Views\Content\Icons\NowyTowar.png" />
+    <None Remove="Views\Content\Icons\plus.png" />
+    <None Remove="Views\Content\Icons\Powrot.png" />
+    <None Remove="Views\Content\Icons\Towary.png" />
+    <None Remove="Views\Content\Icons\Zapisz.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EntityDeploy Include="Model\ModelFaktury.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelFaktury.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Security" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Views\Content\Icons\DodajFakture.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\Dom.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\DoPrzodu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\Drukuj.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\Faktury.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\Kontrahenci.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\NowyKontrahent.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\NowyTowar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\plus.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\Powrot.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\Towary.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Content\Icons\Zapisz.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Model\ModelFaktury.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ModelFaktury.edmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\ViewModels\" />
+  </ItemGroup>
+
+</Project>

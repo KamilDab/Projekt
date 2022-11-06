@@ -1,0 +1,119 @@
+﻿<UserControl x:Class="Projekt.Views.WszyscyKontrachenciView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Projekt.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="StyleZakladekResources.xaml"/>
+    </UserControl.Resources>
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Expander Grid.Row="0" Header="Lista kontrahentow">
+            <DataGrid Grid.Row="1" Name="MyGrid"  Height="100">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Kod" Width="70" />
+                    <DataGridTextColumn Header="Nazwa" Width="100"/>
+                    <DataGridTextColumn Header="NIP" Width="70"/>
+                    <DataGridTextColumn Header="EAN" Width="40"/>
+                    <DataGridTextColumn Header="Kod pocztowy" Width="100"/>
+                    <DataGridTextColumn Header="Miasto" Width="70"/>
+                    <DataGridTextColumn Header="Ulica" Width="70"/>
+                    <DataGridTextColumn Header="Telefon" Width="70"/>
+                    <DataGridTextColumn Header="Uwagi" Width="70"/>
+
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Expander>
+        <Expander Grid.Row="1" Header="Filtr aktywny">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Row="0" Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Content="Przedstawiciel:" Style="{StaticResource LabelStandardowy}"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource LongBoxStandardowy}"/>
+                        <Label Grid.Row="1" Grid.Column="0" Content="Rolnik"  Style="{StaticResource LabelStandardowy}"/>
+                        <CheckBox Grid.Row="1" Grid.Column="1" Content="Tak" Style="{StaticResource CheckBoxDoLewej}"/>
+                    </Grid>
+
+                    <Grid Grid.Row="0" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <CheckBox Grid.Row="0" Grid.Column="0" Content="kontrahenci z nierozliczonymi płatnosciami"/>
+                        <CheckBox Grid.Row="1" Content="dłużnicy" Style="{StaticResource CheckBoxDoLewej}"/>
+                        <CheckBox Grid.Row="1" Grid.Column="1" Content="Kwoty powyzej" Style="{StaticResource CheckBoxDoLewej}"/>
+                        <TextBox Grid.Row="1" Grid.Column="2" Style="{StaticResource LongBoxStandardowy}"/>
+                        <CheckBox Grid.Row="2" Grid.Column="1" Content="Tylko przeterminowane" Style="{StaticResource CheckBoxDoLewej}"/>
+                        <CheckBox Grid.Row="3" Grid.Column="0" Content="wierzyciele" Style="{StaticResource CheckBoxDoLewej}"/>
+                        <CheckBox Grid.Row="3" Grid.Column="1" Content="Waluta" Style="{StaticResource CheckBoxDoLewej}"/>
+                        <ComboBox Grid.Row="3" Grid.Column="2" />
+
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="1"  >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Content="Grupa: " Style="{StaticResource LabelStandardowy}"/>
+                    <ComboBox Grid.Row="0" Grid.Column="1" Style="{StaticResource ComboBoxNormal}" />
+                    <TextBox Grid.Row="0" Grid.Column="2"  Width="400" Margin="5,2,0,2"/>
+                    <Label Grid.Row="1" Grid.Column="0" Content="Rodzaj: " Style="{StaticResource LabelStandardowy}"/>
+                    <ComboBox Grid.Row="1" Grid.Column="1" Style="{StaticResource ComboBoxNormal}" />
+                    <CheckBox Grid.Row="1" Grid.Column="2" Content="Nieaktywni" Style="{StaticResource CheckBox}"/>
+                    <Label  Grid.Row="2" Grid.Column="0" Content="Filtr: " Style="{StaticResource LabelStandardowy}"/>
+                    <ComboBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource LongBoxLong}" />
+                </Grid>
+            </Grid>
+
+        </Expander>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4ca02ad7ac3f4855bcb7f4f4d2c0256c" Name="Diagram1">
+        <EntityTypeShape EntityType="ProjektPDABModel.Adres" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektPDABModel.Dostawca" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektPDABModel.Faktura" Width="1.5" PointX="8.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektPDABModel.KategoriaSprzedazy" Width="1.5" PointX="6" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektPDABModel.KategoriaZakupu" Width="1.5" PointX="1.5" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektPDABModel.Kontrahent" Width="1.5" PointX="6" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektPDABModel.Magazyn" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektPDABModel.PozycjaFaktury" Width="1.5" PointX="6" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektPDABModel.PrzyjecieZewnetrzne" Width="1.5" PointX="1.5" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektPDABModel.Rodzaj" Width="1.5" PointX="3.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektPDABModel.RodzajFaktury" Width="1.5" PointX="6" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektPDABModel.SposobZaplaty" Width="1.5" PointX="6" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektPDABModel.StatusKontrahenta" Width="1.5" PointX="3.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektPDABModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektPDABModel.Towar" Width="1.5" PointX="0.75" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjektPDABModel.WydanieWewnetrzne" Width="1.5" PointX="1.5" PointY="17.125" IsExpanded="true" />
+        <AssociationConnector Association="ProjektPDABModel.FK_Dostawca_Adres" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektPDABModel.FK_Kontrahent_Adres" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektPDABModel.FK_Dostawca_Magazyn" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektPDABModel.FK_Dostawca_Towar" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektPDABModel.FK_Faktura_KategoriaSprzedazy" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektPDABModel.FK_Faktura_Kontrahent" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektPDABModel.FK_Faktura_PozycjaFaktury" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektPDABModel.FK_Faktura_RodzajFaktury" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektPDABModel.FK_Faktura_SposobZaplaty" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektPDABModel.FK_Towar_KategoriaZakupu" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektPDABModel.FK_Kontrahent_Rodzaj" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektPDABModel.FK_Kontrahent_StatusKontrahenta" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektPDABModel.FK_Magazyn_PrzyjecieZewnetrzne" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektPDABModel.FK_Magazyn_WydanieWewnetrzne" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjektPDABModel.FK_Towar_Magazyn" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,182 @@
+﻿<UserControl x:Class="Projekt.Views.WszystkieFakturyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Projekt.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary Source="StyleZakladekResources.xaml"/>
+    </UserControl.Resources>
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Expander Header="Lista faktur">
+            <DataGrid Grid.Row="1" Name="MyGrid"  Height="200">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Numer dokumentu" Width="120" />
+                    <DataGridTextColumn Header="Status"   Width="70"/>
+                    <DataGridTextColumn Header="Data wyst." Width="70"/>
+                    <DataGridTextColumn Header="Magazyn" Width="40"/>
+                    <DataGridTextColumn Header="Kontrachent" Width="100"/>
+                    <DataGridTextColumn Header="Miasto" Width="70"/>
+                    <DataGridTextColumn Header="Netto" Width="70" />
+                    <DataGridTextColumn Header="Brutto" Width="70"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Expander>
+        <Expander Header="Filtr zawansowany" Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="70" />
+                        <ColumnDefinition Width="70" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="70" />
+                        <ColumnDefinition Width="70" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="70" />
+                        <ColumnDefinition Width="70" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Content="Bufor: " Style="{StaticResource LabelStandardowy}"/>
+                    <CheckBox Grid.Row="0" Grid.Column="1" Content="Tak" Style="{StaticResource CheckBox}" />
+                    <CheckBox Grid.Row="0" Grid.Column="2" Content="Nie" Style="{StaticResource CheckBox}" />
+                    <Label Grid.Row="0" Grid.Column="3" Content="Korekty: " Style="{StaticResource LabelStandardowy}"/>
+                    <CheckBox Grid.Row="0" Grid.Column="4" Content="Tak" Style="{StaticResource CheckBox}" />
+                    <CheckBox Grid.Row="0" Grid.Column="5" Content="Nie" Style="{StaticResource CheckBox}" />
+                    <Label Grid.Row="0" Grid.Column="6" Content="Rozliczone: " Style="{StaticResource LabelStandardowy}"/>
+                    <CheckBox Grid.Row="0" Grid.Column="7" Content="Tak" Style="{StaticResource CheckBox}" />
+                    <CheckBox Grid.Row="0" Grid.Column="8" Content="Nie" Style="{StaticResource CheckBox}" />
+
+                    <Label Grid.Row="1" Grid.Column="0" Content="Anulowany: " Style="{StaticResource LabelStandardowy}"/>
+                    <CheckBox Grid.Row="1" Grid.Column="1" Content="Tak" Style="{StaticResource CheckBox}" />
+                    <CheckBox Grid.Row="1" Grid.Column="2" Content="Nie" Style="{StaticResource CheckBox}" />
+                    <Label Grid.Row="1" Grid.Column="3" Content="Zaliczkowe: " Style="{StaticResource LabelStandardowy}"/>
+                    <CheckBox Grid.Row="1" Grid.Column="4" Content="Tak" Style="{StaticResource CheckBox}" />
+                    <CheckBox Grid.Row="1" Grid.Column="5" Content="Nie" Style="{StaticResource CheckBox}" />
+                    <Label Grid.Row="1" Grid.Column="6" Content="Z paragonem: " Style="{StaticResource LabelStandardowy}"/>
+                    <CheckBox Grid.Row="1" Grid.Column="7" Content="Tak" Style="{StaticResource CheckBox}" />
+                    <CheckBox Grid.Row="1" Grid.Column="8" Content="Nie" Style="{StaticResource CheckBox}" />
+
+                    <Label Grid.Row="2" Grid.Column="0" Content="Zaksiegowane: " Style="{StaticResource LabelStandardowy}"/>
+                    <CheckBox Grid.Row="2" Grid.Column="1" Content="Tak" Style="{StaticResource CheckBox}" />
+                    <CheckBox Grid.Row="2" Grid.Column="2" Content="Nie" Style="{StaticResource CheckBox}" />
+                    <Label Grid.Row="2" Grid.Column="3" Content="FV marża: " Style="{StaticResource LabelStandardowy}"/>
+                    <CheckBox Grid.Row="2" Grid.Column="4" Content="Tak" Style="{StaticResource CheckBox}" />
+                    <CheckBox Grid.Row="2" Grid.Column="5" Content="Nie" Style="{StaticResource CheckBox}" />
+                    <Label Grid.Row="2" Grid.Column="6" Content="Utw. WZ: " Style="{StaticResource LabelStandardowy}"/>
+                    <CheckBox Grid.Row="2" Grid.Column="7" Content="Tak" Style="{StaticResource CheckBox}" />
+                    <CheckBox Grid.Row="2" Grid.Column="8" Content="Nie" Style="{StaticResource CheckBox}" />
+
+                    <Label Grid.Row="3" Grid.Column="0" Content="Fiskalne: " Style="{StaticResource LabelStandardowy}"/>
+                    <CheckBox Grid.Row="3" Grid.Column="1" Content="Tak" Style="{StaticResource CheckBox}" />
+                    <CheckBox Grid.Row="3" Grid.Column="2" Content="Nie" Style="{StaticResource CheckBox}" />
+                    <Label Grid.Row="3" Grid.Column="3" Content="Pierwotne: " Style="{StaticResource LabelStandardowy}"/>
+                    <CheckBox Grid.Row="3" Grid.Column="4" Content="Tak" Style="{StaticResource CheckBox}" />
+                    <CheckBox Grid.Row="3" Grid.Column="5" Content="Nie" Style="{StaticResource CheckBox}" />
+
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Content="Schemat numeracji:" Style="{StaticResource LabelStandardowy}"/>
+                        <ComboBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Width="400" Margin="2" />
+                        <CheckBox Grid.Row="1" Grid.Column="0" Content="Numery" Style="{StaticResource CheckBoxDoLewej}" />
+                        <Label Grid.Row="1" Grid.Column="1" Content="od:" Style="{StaticResource LabelStandardowy}"/>
+                        <TextBox Grid.Row="1" Grid.Column="2" Text="0" Style="{StaticResource ControlSzerokoscAuto}"/>
+                        <Label Grid.Row="1" Grid.Column="3" Content="do:" Style="{StaticResource LabelStandardowy}"/>
+                        <TextBox Grid.Row="1" Grid.Column="4" Text="0" Style="{StaticResource ControlSzerokoscAuto}"/>
+
+                        <CheckBox Grid.Row="2" Grid.Column="0" Content="Data sprzedaży" Style="{StaticResource CheckBoxDoLewej}" />
+                        <Label Grid.Row="2" Grid.Column="1" Content="od:" Style="{StaticResource LabelStandardowy}"/>
+                        <DatePicker Grid.Row="2" Grid.Column="2" />
+                        <Label Grid.Row="2" Grid.Column="3" Content="do:" Style="{StaticResource LabelStandardowy}"/>
+                        <DatePicker Grid.Row="2" Grid.Column="4" />
+
+                        <CheckBox Grid.Row="3" Grid.Column="0" Content="Data wystawienia" Style="{StaticResource CheckBoxDoLewej}" />
+                        <Label Grid.Row="3" Grid.Column="1" Content="od:" Style="{StaticResource LabelStandardowy}"/>
+                        <DatePicker Grid.Row="3" Grid.Column="2" />
+                        <Label Grid.Row="3" Grid.Column="3" Content="do:" Style="{StaticResource LabelStandardowy}"/>
+                        <DatePicker Grid.Row="3" Grid.Column="4" />
+
+                        <CheckBox Grid.Row="4" Grid.Column="0" Content="Kwota" Style="{StaticResource CheckBoxDoLewej}" />
+                        <Label Grid.Row="4" Grid.Column="1" Content="od:" Style="{StaticResource LabelStandardowy}"/>
+                        <TextBox Grid.Row="4" Grid.Column="2" Text="0,00" Style="{StaticResource ControlSzerokoscAuto}"/>
+                        <Label Grid.Row="4" Grid.Column="3" Content="do:" Style="{StaticResource LabelStandardowy}"/>
+                        <TextBox Grid.Row="4" Grid.Column="4" Text="0,00" Style="{StaticResource ControlSzerokoscAuto}"/>
+
+
+
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="115" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0" Content="Magazyn" Style="{StaticResource LabelStandardowy}"/>
+                        <ComboBox Grid.Row="0" Grid.Column="1" Style="{StaticResource ControlSzerokoscAuto}"/>
+
+                        <ComboBox Grid.Row="1" Grid.Column="0" Text="Kontrahent" Style="{StaticResource ControlSzerokoscAuto}"/>
+                        <ComboBox Grid.Row="1" Grid.Column="1"  Style="{StaticResource ControlSzerokoscAuto}"/>
+                    </Grid>
+
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Filtry: " Style="{StaticResource LabelStandardowy}"/>
+                    <ComboBox Grid.Column="1" Style="{StaticResource LongBoxLong}"/>
+                </Grid>
+            </Grid>
+        </Expander>
+
+    </Grid>
+</UserControl>

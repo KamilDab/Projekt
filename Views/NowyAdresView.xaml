@@ -7,6 +7,39 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="Azure">
-        <Label Content="Tu bedzie dodawanie adresow"/>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Kod pocztowy" Margin="0,8,0,8"/>
+            <TextBox Grid.Row="0" Grid.Column="1" Margin="0,8,0,8" Width="50"
+                 HorizontalAlignment="Left" Text="{Binding Path=KodPocztowy, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Label Grid.Row="1" Grid.Column="0" Content="Kraj" Margin="0,8,0,8"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="0,8,0,8" Width="150" 
+                 HorizontalAlignment="Left" Text="{Binding Path=Kraj, UpdateSourceTrigger=PropertyChanged}" />
+
+            <Label Grid.Row="2" Grid.Column="0" Content="Miasto" Margin="0,8,0,8"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Margin="0,8,0,8" Width="50" 
+                 HorizontalAlignment="Left" Text="{Binding Path=Miasto, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Label Grid.Row="3" Grid.Column="0" Content="Ulica" Margin="0,8,0,8"/>
+            <TextBox Grid.Row="3" Grid.Column="1" Margin="0,8,0,8" Width="50"
+                 HorizontalAlignment="Left" Text="{Binding Path=Ulica, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Label Grid.Row="4" Grid.Column="0" Content="Numer domu" Margin="0,8,0,8"/>
+            <TextBox Grid.Row="4" Grid.Column="1" Margin="0,8,0,8" Width="50"
+                 HorizontalAlignment="Left" Text="{Binding Path=NrDomu, UpdateSourceTrigger=PropertyChanged}"/>
+
+            
+        </Grid>
     </Grid>
 </local:JedenViewBase>

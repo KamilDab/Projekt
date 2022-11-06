@@ -84,8 +84,4 @@
     </Compile>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ViewModels\ViewModels\" />
-  </ItemGroup>
-
 </Project>

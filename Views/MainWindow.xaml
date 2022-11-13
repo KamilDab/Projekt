@@ -82,7 +82,9 @@
                     <MenuItem Header="_Wszystkie kategorie sprzedazy" Command="{Binding KategoriaSprzedazyCommand}"/>
                     <MenuItem Header="_Nowa kategoria sprzedazy" Command="{Binding NowaKategoriaSprzedazy }"/>
                     <MenuItem Header="_Wszystkie rodzaje faktury" Command="{Binding WszystkieRodzajeFakturyCommand}"/>
+                    <MenuItem Header="_Nowy rodzaj faktury" Command="{Binding NowyRodzajFakturyCommand}"/>
                     <MenuItem Header="_Wszystkie sposoby zaplaty" Command="{Binding WszystkieSposobyZaplatyCommand }"/>
+                    <MenuItem Header="_Nowy sposoby zaplaty" Command="{Binding NowySposobZaplatyCommand }"/>
 
 
                 </MenuItem>

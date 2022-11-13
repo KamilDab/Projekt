@@ -175,6 +175,20 @@ namespace Projekt.ViewModels
                 return new BaseCommand(() => createView(new NoweWydaniaWewnetrzneViewModel()));
             }
         }
+        public ICommand NowyRodzajFakturyCommand
+        {
+            get
+            {
+                return new BaseCommand(() => createView(new NowyRodzajFakturyViewModel()));
+            }
+        }
+        public ICommand NowySposobZaplatyCommand
+        {
+            get
+            {
+                return new BaseCommand(() => createView(new NowySposobZaplatyViewModel()));
+            }
+        }
         #endregion
 
         #region Przyciski w menu z lewej strony

@@ -42,6 +42,13 @@ namespace Projekt.ViewModels
                 return new BaseCommand(showAllTowar);
             }
         }
+        public ICommand StatusyKontrahentaCommand
+        {
+            get
+            {
+                return new BaseCommand(showAllStstusKontrahenta);
+            }
+        }
 
 
         public ICommand NowaFakturaCommand
@@ -216,6 +223,19 @@ namespace Projekt.ViewModels
             }
             this.setActiveWorkspace(workspace);
         }
+
+        
+             private void showAllStstusKontrahenta()
+        {
+            WszystkieStatusyKontrahentaViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is WszystkieStatusyKontrahentaViewModel) as WszystkieStatusyKontrahentaViewModel;
+            if (workspace == null)
+            {
+                workspace = new WszystkieStatusyKontrahentaViewModel();
+                this.Workspaces.Add(workspace);
+            }
+            this.setActiveWorkspace(workspace);
+        }
+
         //to jest funkcja, która otwiera nową zakładke Towar
         //za każdym tworzy nową NOWĄ zakładkę do dodawania towaru
 

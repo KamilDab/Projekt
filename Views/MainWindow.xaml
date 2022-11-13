@@ -97,9 +97,9 @@
                 </MenuItem>
                 <MenuItem Header="Rodzaj kontrahenta" Command="{Binding RodzajKontrahentaCommand}" />
                 <MenuItem Header="Nowy rodzaj kontrahenta" Command="{Binding NowyRodzajKontrahentaCommand}" />
-                <MenuItem Header="Wszystkie adresy " Command="{Binding WszystkieAdresyCommand}">
-                </MenuItem>
+                <MenuItem Header="Wszystkie adresy " Command="{Binding WszystkieAdresyCommand}"/>
                 <MenuItem Header="Nowy adres " Command="{Binding NowyAdresCommand}"/>
+                <MenuItem Header="Wszystkie statusy kontrahenta " Command="{Binding StatusyKontrahentaCommand}"/>
 
             </MenuItem>
         </Menu>

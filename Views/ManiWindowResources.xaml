@@ -45,6 +45,10 @@
     <DataTemplate DataType="{x:Type vm:NowyAdresViewModel}">
         <vw:NowyAdresView/>
     </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:WszystkieStatusyKontrahentaViewModel}">
+        <vw:WszystkieStatusyKontrahentaView/>
+    </DataTemplate>
     <!--tu jest koniec laczenia View z ViewModel zakładek-->
 
     <Style x:Key="ButtoBok90" TargetType="{x:Type Button}">

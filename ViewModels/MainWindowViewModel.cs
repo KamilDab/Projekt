@@ -128,6 +128,38 @@ namespace Projekt.ViewModels
                 return new BaseCommand(showAllAdresy);
             }
         }
+
+        public ICommand WszystkieRodzajeFakturyCommand
+        {
+            get
+            {
+                return new BaseCommand(showAllRodzajeFaktury);
+            }
+        }
+
+        public ICommand WszystkieSposobyZaplatyCommand
+        {
+            get
+            {
+                return new BaseCommand(showAllSposobyZaplaty);
+            }
+        }
+
+        public ICommand WszystkiePrzyjeciaZewnetrzneCommand
+        {
+            get
+            {
+                return new BaseCommand(showAllPrzyjeciaZewnetrzne);
+            }
+        }
+
+        public ICommand WszystkieWydaniaWewnetrzneCommand
+        {
+            get
+            {
+                return new BaseCommand(showAllWydaniaWewnetrzne);
+            }
+        }
         #endregion
 
         #region Przyciski w menu z lewej strony
@@ -267,6 +299,46 @@ namespace Projekt.ViewModels
             this.setActiveWorkspace(workspace);
         }
 
+        private void showAllRodzajeFaktury()
+        {
+           WszystkieRodzajeFakturyViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is WszystkieRodzajeFakturyViewModel) as WszystkieRodzajeFakturyViewModel;
+            if (workspace == null)
+            {
+                workspace = new WszystkieRodzajeFakturyViewModel();
+                this.Workspaces.Add(workspace);
+            }
+            this.setActiveWorkspace(workspace);
+        }
+        private void showAllSposobyZaplaty()
+        {
+            WszystkieSposobyZaplatyViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is WszystkieSposobyZaplatyViewModel) as WszystkieSposobyZaplatyViewModel;
+            if (workspace == null)
+            {
+                workspace = new WszystkieSposobyZaplatyViewModel();
+                this.Workspaces.Add(workspace);
+            }
+            this.setActiveWorkspace(workspace);
+        }
+        private void showAllPrzyjeciaZewnetrzne()
+        {
+            WszystkiePrzyjeciaWewnetrzneViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is WszystkiePrzyjeciaWewnetrzneViewModel) as WszystkiePrzyjeciaWewnetrzneViewModel;
+            if (workspace == null)
+            {
+                workspace = new WszystkiePrzyjeciaWewnetrzneViewModel();
+                this.Workspaces.Add(workspace);
+            }
+            this.setActiveWorkspace(workspace);
+        }
+        private void showAllWydaniaWewnetrzne()
+        {
+            WszytskieWydaniaWewnetrzneViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is WszytskieWydaniaWewnetrzneViewModel) as WszytskieWydaniaWewnetrzneViewModel;
+            if (workspace == null)
+            {
+                workspace = new WszytskieWydaniaWewnetrzneViewModel();
+                this.Workspaces.Add(workspace);
+            }
+            this.setActiveWorkspace(workspace);
+        }
         //to jest funkcja, która otwiera nową zakładke Towar
         //za każdym tworzy nową NOWĄ zakładkę do dodawania towaru
 

@@ -60,8 +60,8 @@
 
                     </MenuItem>
                 </MenuItem>
-                <MenuItem Header="_Przyjecie zewnetrzne (PZ)"/>
-                <MenuItem Header="_Wydanie zewnetrzne (WZ)"/>
+                <MenuItem Header="_Przyjecie zewnetrzne (PZ)"  Command="{Binding WszystkiePrzyjeciaZewnetrzneCommand}"/>
+                <MenuItem Header="_Wydanie wewnetrzne (WW)"  Command="{Binding WszystkieWydaniaWewnetrzneCommand}" />
             </MenuItem>
             
             <MenuItem Header="_Ksiegowosc">
@@ -78,6 +78,8 @@
                     </MenuItem>
                     <MenuItem Header="_Wszystkie kategorie sprzedazy" Command="{Binding KategoriaSprzedazyCommand}"/>
                     <MenuItem Header="_Nowa kategoria sprzedazy" Command="{Binding NowaKategoriaSprzedazy }"/>
+                    <MenuItem Header="_Wszystkie rodzaje faktury" Command="{Binding WszystkieRodzajeFakturyCommand}"/>
+                    <MenuItem Header="_Wszystkie sposoby zaplaty" Command="{Binding WszystkieSposobyZaplatyCommand }"/>
 
 
                 </MenuItem>

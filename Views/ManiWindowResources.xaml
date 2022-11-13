@@ -62,6 +62,21 @@
         <vw:NowaKategoriaSprzedazyView/>
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type vm:WszystkieRodzajeFakturyViewModel}">
+        <vw:WszystkieRodzajFakturyView/>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type vm:WszystkieSposobyZaplatyViewModel}">
+        <vw:WszystkieSposobyZaplatyView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:WszystkiePrzyjeciaWewnetrzneViewModel}">
+        <vw:WszystkiePrzyjeciaZewnetrzneView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:WszytskieWydaniaWewnetrzneViewModel}">
+        <vw:WszystkieWydaniaWewnetrzneView/>
+    </DataTemplate>
 
     <!--tu jest koniec laczenia View z ViewModel zakładek-->
 

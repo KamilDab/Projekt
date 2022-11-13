@@ -70,14 +70,18 @@
                         <MenuItem.Icon>
                             <Image Source="/Views/Content/Icons/Faktury.png"/>
                         </MenuItem.Icon>
-
                     </MenuItem>
                     <MenuItem Header="_Dodawanie" Command="{Binding NowaFakturaCommand}">
                         <MenuItem.Icon>
                             <Image  Source="/Views/Content/Icons/DodajFakture.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
+                    <MenuItem Header="_Wszystkie kategorie sprzedazy" Command="{Binding KategoriaSprzedazyCommand}"/>
+                    <MenuItem Header="_Nowa kategoria sprzedazy" Command="{Binding NowaKategoriaSprzedazy }"/>
+
+
                 </MenuItem>
+                
                 <MenuItem Header="_Urlopy">
                     <MenuItem Header="W_ypisz urlop">
                     </MenuItem>
@@ -99,6 +103,7 @@
                 <MenuItem Header="Nowy rodzaj kontrahenta" Command="{Binding NowyRodzajKontrahentaCommand}" />
                 <MenuItem Header="Wszystkie adresy " Command="{Binding WszystkieAdresyCommand}"/>
                 <MenuItem Header="Nowy adres " Command="{Binding NowyAdresCommand}"/>
+                <MenuItem Header="Nowy status kontrahenta " Command="{Binding NowyStatusKontrahenta}"/>
                 <MenuItem Header="Wszystkie statusy kontrahenta " Command="{Binding StatusyKontrahentaCommand}"/>
 
             </MenuItem>

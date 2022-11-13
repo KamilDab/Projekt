@@ -49,6 +49,20 @@
     <DataTemplate DataType="{x:Type vm:WszystkieStatusyKontrahentaViewModel}">
         <vw:WszystkieStatusyKontrahentaView/>
     </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type vm:NowyStatusKontrahentaViewModels}">
+        <vw:NowyStatusKontrahentaView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:WszystkieKategoriaSprzedazyViewModel}">
+        <vw:WszystkieKategorieSprzedazyView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:NowaKategoriaSprzedazyViewModel}">
+        <vw:NowaKategoriaSprzedazyView/>
+    </DataTemplate>
+
+
     <!--tu jest koniec laczenia View z ViewModel zakładek-->
 
     <Style x:Key="ButtoBok90" TargetType="{x:Type Button}">

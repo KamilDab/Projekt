@@ -49,7 +49,13 @@ namespace Projekt.ViewModels
                 return new BaseCommand(showAllStstusKontrahenta);
             }
         }
-
+        public ICommand KategoriaSprzedazyCommand
+        {
+            get
+            {
+                return new BaseCommand(showAllKategoriaSprzedazy);
+            }
+        }
 
         public ICommand NowaFakturaCommand
         {
@@ -79,11 +85,25 @@ namespace Projekt.ViewModels
                 return new BaseCommand(() => createView(new NowyAdresViewModel()));
             }
         }
+        public ICommand NowyStatusKontrahenta
+        {
+            get
+            {
+                return new BaseCommand(() => createView(new NowyStatusKontrahentaViewModels()));
+            }
+        }
         public ICommand NowyRodzajKontrahentaCommand
         {
             get
             {
                 return new BaseCommand(() => createView(new NowyRodzajKontrahentaViewModel()));
+            }
+        }
+        public ICommand NowaKategoriaSprzedazy 
+        {
+            get
+            {
+                return new BaseCommand(() => createView(new NowaKategoriaSprzedazyViewModel()));
             }
         }
         public ICommand KontrahenciCommand
@@ -188,6 +208,17 @@ namespace Projekt.ViewModels
             if (workspace == null)
             {
                 workspace = new WszystkieFakturyViewModel();
+                this.Workspaces.Add(workspace);
+            }
+            this.setActiveWorkspace(workspace);
+        }
+       
+        private void showAllKategoriaSprzedazy()
+        {
+            WszystkieKategoriaSprzedazyViewModel workspace = this.Workspaces.FirstOrDefault(vm => vm is WszystkieKategoriaSprzedazyViewModel) as WszystkieKategoriaSprzedazyViewModel;
+            if (workspace == null)
+            {
+                workspace = new WszystkieKategoriaSprzedazyViewModel();
                 this.Workspaces.Add(workspace);
             }
             this.setActiveWorkspace(workspace);

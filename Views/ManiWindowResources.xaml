@@ -74,10 +74,17 @@
         <vw:WszystkiePrzyjeciaZewnetrzneView/>
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type vm:NowePrzyjecieZewnetrzneViewModel}">
+        <vw:NowePrzyjecieZewnetrzneView/>
+    </DataTemplate>
+
     <DataTemplate DataType="{x:Type vm:WszytskieWydaniaWewnetrzneViewModel}">
         <vw:WszystkieWydaniaWewnetrzneView/>
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type vm:NoweWydaniaWewnetrzneViewModel}">
+        <vw:NoweWydanieWewnetrzneView/>
+    </DataTemplate>
     <!--tu jest koniec laczenia View z ViewModel zakładek-->
 
     <Style x:Key="ButtoBok90" TargetType="{x:Type Button}">

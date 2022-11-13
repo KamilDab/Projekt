@@ -160,6 +160,21 @@ namespace Projekt.ViewModels
                 return new BaseCommand(showAllWydaniaWewnetrzne);
             }
         }
+
+        public ICommand NowePrzyjecieZewnetrzneCommand
+        {
+            get
+            {
+                return new BaseCommand(() => createView(new NowePrzyjecieZewnetrzneViewModel()));
+            }
+        }
+        public ICommand NoweWydanieWewnetrzneCommand
+        {
+            get
+            {
+                return new BaseCommand(() => createView(new NoweWydaniaWewnetrzneViewModel()));
+            }
+        }
         #endregion
 
         #region Przyciski w menu z lewej strony

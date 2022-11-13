@@ -61,7 +61,10 @@
                     </MenuItem>
                 </MenuItem>
                 <MenuItem Header="_Przyjecie zewnetrzne (PZ)"  Command="{Binding WszystkiePrzyjeciaZewnetrzneCommand}"/>
+                <MenuItem Header="_Nowe przyjecie zewnetrzne (PZ)"  Command="{Binding NowePrzyjecieZewnetrzneCommand}"/>
                 <MenuItem Header="_Wydanie wewnetrzne (WW)"  Command="{Binding WszystkieWydaniaWewnetrzneCommand}" />
+                <MenuItem Header="_Nowe wydanie wewnetrzne (WW)"  Command="{Binding NoweWydanieWewnetrzneCommand}" />
+                
             </MenuItem>
             
             <MenuItem Header="_Ksiegowosc">

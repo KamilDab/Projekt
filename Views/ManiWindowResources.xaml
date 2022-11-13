@@ -33,6 +33,10 @@
     <DataTemplate DataType="{x:Type vm:RodzajKontrahentaViewModel}">
         <vw:RodzajKontrahentaView/>
     </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type vm:NowyRodzajKontrahentaViewModel}">
+        <vw:NowyRodzajKontrahenta/>
+    </DataTemplate>
 
     <DataTemplate DataType="{x:Type vm:WszystkieAdresyViewModel}">
         <vw:WszytskieAdresyView/>

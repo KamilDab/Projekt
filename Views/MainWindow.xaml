@@ -95,8 +95,8 @@
                         <Image Source="/Views/Content/Icons/Kontrahenci.png" />
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="Rodzaj kontrahenta" Command="{Binding RodzajKontrahentaCommand}" >
-                </MenuItem>
+                <MenuItem Header="Rodzaj kontrahenta" Command="{Binding RodzajKontrahentaCommand}" />
+                <MenuItem Header="Nowy rodzaj kontrahenta" Command="{Binding NowyRodzajKontrahentaCommand}" />
                 <MenuItem Header="Wszystkie adresy " Command="{Binding WszystkieAdresyCommand}">
                 </MenuItem>
                 <MenuItem Header="Nowy adres " Command="{Binding NowyAdresCommand}"/>

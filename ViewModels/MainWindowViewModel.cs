@@ -72,7 +72,13 @@ namespace Projekt.ViewModels
                 return new BaseCommand(() => createView(new NowyAdresViewModel()));
             }
         }
-
+        public ICommand NowyRodzajKontrahentaCommand
+        {
+            get
+            {
+                return new BaseCommand(() => createView(new NowyRodzajKontrahentaViewModel()));
+            }
+        }
         public ICommand KontrahenciCommand
         {
             get
